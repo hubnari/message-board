@@ -11,6 +11,8 @@ class MessagesController < ApplicationController
   # raise params.inspect
   end
   
+
+  
   private
   def message_params
     params.require(:message).permit(:name,:body)
