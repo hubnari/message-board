@@ -1,18 +1,18 @@
 class MessagesController < ApplicationController
   def index
-    @aaa = Message.new
+    @message = Message.new
     @messages=Message.all
   end
   
   def create
-    @aaa=Message.new(message_params)
-    @aaa.save
+    @message=Message.new(message_params)
+    @message.save
     redirect_to root_path , notice:"メッセージを保存しました"
   # raise params.inspect
   end
   
   private
   def message_params
-    params.require(:aaa).permit(:name,:body)
+    params.require(:message).permit(:name,:body)
   end
 end
