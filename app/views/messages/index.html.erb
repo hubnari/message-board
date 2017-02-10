@@ -7,6 +7,9 @@
     <% @messages.each do |message| %>
       <span class="label label-info"><%= message.name %></span>
       <%= message.body %>
+     ( <%= link_to "edit", edit_message_path(message.id) %>
+      <%= link_to "delete" , message_path(message.id) , method: :DELETE , data:{confirm: "削除してもよろしいですか？"}%>
+     )
       <br>
     <% end %>
   </div>
