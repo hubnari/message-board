@@ -7,14 +7,24 @@
     <% @messages.each do |message| %>
       <span class="label label-info"><%= message.name %></span>
       <%= message.body %>
+<<<<<<< HEAD
      ( <%= link_to "edit", edit_message_path(message.id) %>
       <%= link_to "delete" , message_path(message.id) , method: :DELETE , data:{confirm: "削除してもよろしいですか？"}%>
      )
+=======
+     
+>>>>>>> challenge1
       <br>
     <% end %>
   </div>
 </div>
 
 
+<<<<<<< HEAD
   <%  %>
 <%= render 'form' %>
+=======
+
+
+
+>>>>>>> challenge1
